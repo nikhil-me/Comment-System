@@ -36,5 +36,28 @@ router.get('/fetch', function(req, res, next) {
 	});
 });
 
+router.post('/upvote', function(req, res, next) {
+	console.log(req.body);
+	comment.update({"_id" : req.body.id},{$set :{"upvote" : req.body.upvote}},function(err,updatedComment){
+		if (err){
+			console.error(err);
+		}
+		else{
+			res.send({"status" : "Ok"});
+		}
+	});
+});
+
+router.post('/downvote', function(req, res, next) {
+	comment.update({"_id" : req.body.id},{$set :{"downvote" : req.body.downvote}},function(err,updatedComment){
+		if (err){
+			console.error(err);
+		}
+		else{
+			res.send({"status" : "Ok"});
+		}
+	});
+});
+
 
 module.exports = router;

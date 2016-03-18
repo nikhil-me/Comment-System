@@ -25,9 +25,9 @@
 				<p class="position flow-text materialize-textarea">{{comment.body}}</p>
 			</div>
 			<div class="col l2 s2 updown">
-			<a class="waves-effect waves-light"><i class="material-icons thumbup">thumb_up</i></a> <span>{{comment.upvote}} Upvotes</span>
+			<a class="waves-effect waves-light" ng-click="upvote($index)"><i class="material-icons thumbup">thumb_up</i></a> <span>{{comment.upvote}} Upvotes</span>
 				<br>
-				<a class="waves-effect waves-light"><i class="material-icons thumbdown">thumb_down</i></a> <span>{{comment.downvote}} Downvotes</span>
+				<a class="waves-effect waves-light" ng-click="downvote($index)"><i class="material-icons thumbdown">thumb_down</i></a> <span>{{comment.downvote}} Downvotes</span>
 			</div>
 		</div>
 

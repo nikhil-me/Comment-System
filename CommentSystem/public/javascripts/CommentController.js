@@ -24,7 +24,31 @@ angular.module('commentApp')
 	         .error(function(err){
 	                 console.log(err);
 	         });
-		}
+		};
+
+
+		$scope.upvote = function(index){
+			console.log($scope.comments[index].upvote);
+			$http.post("/upvote",{"id" : $scope.comments[index]._id,"upvote" : $scope.comments[index].upvote+1})
+	         .success(function(data){
+	         	// console.log(data);
+	         	$scope.fetch();
+	         })
+	         .error(function(err){
+	                 console.log(err);
+	         });
+		};
+
+		$scope.downvote = function(index){
+			$http.post("/downvote",{"id" : $scope.comments[index]._id,"downvote" : $scope.comments[index].downvote+1})
+	         .success(function(data){
+	         	// console.log(data);
+	         	$scope.fetch();
+	         })
+	         .error(function(err){
+	                 console.log(err);
+	         });
+		};
 
 		$scope.fetch = function(){
 			$http.get("/fetch")
@@ -35,7 +59,7 @@ angular.module('commentApp')
 	         .error(function(err){
 	                 console.log(err);
 	         });
-		}
+		};
 
 		$timeout($scope.fetch);
 
