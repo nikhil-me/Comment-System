@@ -6,3 +6,32 @@ body {
 a {
   color: #00B7FF;
 }
+.container-border {
+    border: 2px solid #BBBBBB;
+    border-radius: 18px;
+    padding-top: 20px;
+    /*margin-bottom: 22px;*/
+}
+
+.textarea-border{
+	border: 2px solid #BBBBBB 	!important;
+    border-radius: 18px 		!important;
+    /*margin-bottom: 22px 		!important;*/
+}
+
+.comment-label.active{
+	transform : translateY(-200%) !important;
+}
+
+.comment-counter{
+	display : none;
+}
+
+.comment-label.active + .comment-counter{
+	display : block;
+}
+
+
+.display {
+
+}

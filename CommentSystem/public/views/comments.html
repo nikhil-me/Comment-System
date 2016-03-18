@@ -1,0 +1,18 @@
+<div class="container container-border">
+	<div class="container">
+		<div class="row ">
+      <div class="row">
+        <div class="input-field col s12 l12">
+          <textarea id="comment-box" ng-trim="false" ng-model="comment" class="materialize-textarea textarea-border" maxlength="200"></textarea>
+          <label for="comment-box" class="comment-label">Type a comment here...</label>
+          <span class="comment-counter right">{{comment.length||0}}/200</span>
+        </div>
+      </div>
+		</div>
+		<div class="row">
+		</div>
+		<div>
+			<i class="material-icons">thumb_down</i>
+		</div>
+	</div>
+</div>
