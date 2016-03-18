@@ -1,5 +1,5 @@
 <div class="container container-border">
-	<div class="container">
+	<div class="container inner-container">
 		<form ng-submit="postComment(comment,name)">
 			<div class="row ">
 	      <div class="input-field col s12 l12">
@@ -19,8 +19,28 @@
 			</div>
 		</form>
 
-		<div>
-			<i class="material-icons">thumb_down</i>
+		<div class="row comment-entry">
+			<div class="col l10 s10">
+				<h5>1. Rahul Gandhi</h5>
+				<p class="position flow-text materialize-textarea">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			</div>
+			<div class="col l2 s2 updown">
+				<a class="waves-effect waves-light"><i class="material-icons thumbup">thumb_up</i></a> <span>9 Upvotes</span>
+				<br>
+				<a class="waves-effect waves-light"><i class="material-icons thumbdown">thumb_down</i></a> <span>2 Downvotes</span>
+			</div>
 		</div>
+		<div class="row comment-entry">
+			<div class="col l10 s10">
+				<h5>1. Narendra Modi</h5>
+				<p class="position flow-text materialize-textarea">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+			</div>
+			<div class="col l2 s2 updown">
+			<a class="waves-effect waves-light thumbup"><i class="material-icons">thumb_up</i></a> <span>9 Upvotes</span>
+				<br>
+				<a class="waves-effect waves-light thumbdown"><i class="material-icons">thumb_down</i></a> <span>2 Downvotes</span>
+			</div>
+		</div>
+
 	</div>
 </div>
