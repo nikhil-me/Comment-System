@@ -19,26 +19,15 @@
 			</div>
 		</form>
 
-		<div class="row comment-entry">
+		<div class="row comment-entry" ng-repeat="comment in comments track by $index">
 			<div class="col l10 s10">
-				<h5>1. Rahul Gandhi</h5>
-				<p class="position flow-text materialize-textarea">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+				<h5>{{$index+1}}. {{comment.username}}</h5>
+				<p class="position flow-text materialize-textarea">{{comment.body}}</p>
 			</div>
 			<div class="col l2 s2 updown">
-				<a class="waves-effect waves-light"><i class="material-icons thumbup">thumb_up</i></a> <span>9 Upvotes</span>
+			<a class="waves-effect waves-light"><i class="material-icons thumbup">thumb_up</i></a> <span>{{comment.upvote}} Upvotes</span>
 				<br>
-				<a class="waves-effect waves-light"><i class="material-icons thumbdown">thumb_down</i></a> <span>2 Downvotes</span>
-			</div>
-		</div>
-		<div class="row comment-entry">
-			<div class="col l10 s10">
-				<h5>1. Narendra Modi</h5>
-				<p class="position flow-text materialize-textarea">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
-			</div>
-			<div class="col l2 s2 updown">
-			<a class="waves-effect waves-light thumbup"><i class="material-icons">thumb_up</i></a> <span>9 Upvotes</span>
-				<br>
-				<a class="waves-effect waves-light thumbdown"><i class="material-icons">thumb_down</i></a> <span>2 Downvotes</span>
+				<a class="waves-effect waves-light"><i class="material-icons thumbdown">thumb_down</i></a> <span>{{comment.downvote}} Downvotes</span>
 			</div>
 		</div>
 
