@@ -5,14 +5,6 @@ angular.module('commentApp',['ngRoute'])
 			$('textarea#comment-box').characterCounter();
 			$('input#input_text, textarea#textarea1').characterCounter();
 		 });
-
-		$scope.comments=["abc","dfg"];
-		$scope.comment;
-
-		$scope.addComment = function(commentForm){
-			$scope.comments.push(commentForm);
-		}
-
 	}]);
 
 

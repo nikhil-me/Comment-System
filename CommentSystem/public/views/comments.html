@@ -1,16 +1,24 @@
 <div class="container container-border">
 	<div class="container">
-		<div class="row ">
-      <div class="row">
-        <div class="input-field col s12 l12">
-          <textarea id="comment-box" ng-trim="false" ng-model="comment" class="materialize-textarea textarea-border" maxlength="200"></textarea>
-          <label for="comment-box" class="comment-label">Type a comment here...</label>
-          <span class="comment-counter right">{{comment.length||0}}/200</span>
-        </div>
-      </div>
-		</div>
-		<div class="row">
-		</div>
+		<form ng-submit="postComment(comment,name)">
+			<div class="row ">
+	      <div class="input-field col s12 l12">
+	        <textarea id="comment-box" ng-trim="false" ng-model="comment" class="materialize-textarea textarea-border" maxlength="200" required></textarea>
+	        <label for="comment-box" class="comment-label">Type a comment here...</label>
+	        <span class="comment-counter right">{{comment.length||0}}/200</span>
+	      </div>
+	      <div class="input-field col s6 l6">
+	        <input id="name" type="text" ng-model="name" required>
+	        <label for="name">Name</label>
+	      </div>
+	      <div class="input-field col s6 l6">
+					<button class="waves-effect waves-light btn right" type="submit"><i class="material-icons right">send</i>Post</button>
+				</div>
+			</div>
+			<div class="row">
+			</div>
+		</form>
+
 		<div>
 			<i class="material-icons">thumb_down</i>
 		</div>

@@ -3,15 +3,12 @@ angular.module('commentApp')
 
 	$routeProvider
 
-	.when('/post', {
+	.when('/comments', {
 
-		templateUrl: '/views/pages/topreleases/topreleases.html',
-		controller: "TopReleasesController"
+		templateUrl: '/views/comments.html',
+		controller: "CommentsController"
 	})
 
-});
+	.otherwise('/comments');
 
-angular.module('commentApp')
-.run(function($rootScope, $location) {
-    $rootScope.location = $location;
 });
