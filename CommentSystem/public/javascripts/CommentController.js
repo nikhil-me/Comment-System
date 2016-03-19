@@ -5,6 +5,8 @@ angular.module('commentApp')
 		$scope.comment;
 		$scope.name;
 
+
+		//Fucntion to post the comment
 		$scope.postComment = function(){
 			var details = {
 				"username" : $scope.name,
@@ -12,7 +14,7 @@ angular.module('commentApp')
 				"upvote" : 0,
 				"downvote" : 0
 			};
-
+			// Post request to insert the comment in the mongo 
 			$http.post("/insert",details)
 	         .success(function(data){
 	         	console.log(data);
@@ -25,7 +27,8 @@ angular.module('commentApp')
 	         });
 		};
 
-
+		//update the post upvote in the mongo as well as 
+		//at the frontend
 		$scope.upvote = function(index){
 			console.log($scope.comments[index].upvote);
 			$http.post("/upvote",{"id" : $scope.comments[index]._id,"upvote" : $scope.comments[index].upvote+1})
@@ -37,6 +40,8 @@ angular.module('commentApp')
 	         });
 		};
 
+		//update the post downvote in the mongo as well as 
+		//at the frontend
 		$scope.downvote = function(index){
 			$http.post("/downvote",{"id" : $scope.comments[index]._id,"downvote" : $scope.comments[index].downvote+1})
 	         .success(function(data){
@@ -47,6 +52,8 @@ angular.module('commentApp')
 	         });
 		};
 
+
+		//To fetch all the comments 
 		$scope.fetch = function(){
 			$http.get("/fetch")
 	         .success(function(data){
@@ -58,6 +65,9 @@ angular.module('commentApp')
 	         });
 		};
 
+
+		//This is to call the fetch function 
+		//when the controller is loaded
 		$timeout($scope.fetch);
 
 	}]);
