@@ -6,7 +6,6 @@ angular.module('commentApp')
 		$scope.name;
 
 		$scope.postComment = function(){
-			// alert($scope.comment +" "+ $scope.name);
 			var details = {
 				"username" : $scope.name,
 				"body" : $scope.comment,
@@ -31,7 +30,6 @@ angular.module('commentApp')
 			console.log($scope.comments[index].upvote);
 			$http.post("/upvote",{"id" : $scope.comments[index]._id,"upvote" : $scope.comments[index].upvote+1})
 	         .success(function(data){
-	         	// console.log(data);
 	         	$scope.fetch();
 	         })
 	         .error(function(err){
@@ -42,7 +40,6 @@ angular.module('commentApp')
 		$scope.downvote = function(index){
 			$http.post("/downvote",{"id" : $scope.comments[index]._id,"downvote" : $scope.comments[index].downvote+1})
 	         .success(function(data){
-	         	// console.log(data);
 	         	$scope.fetch();
 	         })
 	         .error(function(err){
