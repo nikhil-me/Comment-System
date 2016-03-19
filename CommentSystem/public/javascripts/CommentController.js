@@ -1,7 +1,7 @@
 angular.module('commentApp')
 	.controller("CommentsController",["$http","$scope","$timeout" ,function($http,$scope,$timeout){
 
-		$scope.comments=["abc","dfg"];
+		$scope.comments;
 		$scope.comment;
 		$scope.name;
 
