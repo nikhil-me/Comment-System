@@ -6,14 +6,20 @@ body {
 a {
   color: #00B7FF;
 }
+
+button {
+	background-color: #D0002D !important;
+}
+
 .container-border {
     border: 2px solid #BBBBBB;
     border-radius: 18px;
     padding-top: 20px;
-    margin-left: 20px;
+    margin-left: 65px;
     margin-right: 0px;
     width :90%;
     background-color: #FAFAFA;
+	box-shadow: 0 0 20px #6D6969;
 }
 
 .inner-container{
@@ -28,9 +34,35 @@ a {
     /*margin-bottom: 22px 		!important;*/
 }
 
-.comment-label.active{
-	transform : translateY(-200%) !important;
+
+.comment-label,.name-label{
+	left : 1.75rem !important;
+	color : #BBBBBB !important;
 }
+
+.comment-label.active,.name-label.active{
+	transform : translateY(-200%) !important;
+	color : #D0002D !important;
+}
+
+.comment-label.active ~ .comment-input{
+	transform : translateY(-200%) !important;
+	color : #D0002D !important;
+}
+
+.name-label.active ~ .name-input{
+	color : #D0002D !important;
+}
+
+.name-input input:focus {
+    border-bottom: 1px solid #D0002D !important;
+    box-shadow: 0 1px 0 0 #D0002D !important;
+ }
+
+.comment-input textarea:focus {
+    border-bottom: 1px solid #BBBBBB !important;
+    box-shadow: 0 1px 0 0 #BBBBBB !important;
+ }
 
 .comment-counter{
 	display : none;
@@ -43,6 +75,8 @@ a {
 
 .comment-entry{
 	border-bottom: 2px solid #DDDDDD ;
+	box-shadow: 0 0 20px #6D6969;
+	border-radius :5px;
 }
 
 .thumbup{
@@ -69,13 +103,22 @@ a.thumup:hover{
 }
 
 h5 {
-	font-weight: 500; 
+	font-weight: 500;
+	color : #736E6E;
 }
 
+span {
+	color : #808080 !important;
+}
 .position{
 	position: relative;
 	left :28px;
 	font-size: 14px;
 	word-wrap: break-word;
 	padding-right: 120px;
+	color : #888383;
+}
+
+#comment-box{
+	/*box-shadow: 0 0 5px #6D6969;*/
 }
