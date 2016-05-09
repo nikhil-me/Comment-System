@@ -13,7 +13,7 @@ angular.module('commentApp')
 				"body" : $scope.comment,
 				"upvote" : 0,
 				"downvote" : 0
-			};
+ 			};
 			// Post request to insert the comment in the mongo 
 			$http.post("/insert",details)
 	         .success(function(data){
