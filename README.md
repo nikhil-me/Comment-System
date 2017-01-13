@@ -1,29 +1,43 @@
-Nikhil Mehandiratta : ABV-IIITM Gwalior
+# Comment System(Rentomojo Assignment)
 
-Rquirements : node(4.3.0),express(4.13.1)
+It is simple comment system application built using MEAN stack.
 
-install node and express
+## Getting Started
 
---> All the routes is in index.js file
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
---> All angular routes are in app.routes.js
+### Prerequisites
 
---> Main html file is comments.html
+What things you need to install the software
 
-To test the working go to the CommentSystem folder
+```
+node, express
+```
 
-type : npm install (this install all the packages which are required by express generator)
+### Installation
 
-To start the server :  npm start
+Install the dependencies of the app, Using :
+```
+npm install
+```
 
-After that you can hit the server end points to check the working 
+## Running the app
 
--- http://localhost:3000/#/comments
+Use below command, to start the server locally
+```
+npm start
+```
+After that, type 
+```
+http://localhost:3000/#/comments
+```
+in the browser.
 
-1. You can post comment by typing the comment in the comment box and also by typint the name(this two field are set to required)
+### Functionalities
 
-2. When you click on post then comment will be automatically posted.
+User can post comment using comment box.
+User can upvote or downvote comment.
 
-3. You can upvote or downvote comment.
+## Authors
 
-Port: 3000
+* **Nikhil Mehandiratta** - *Initial work* - [someone12321](https://github.com/someone12321)
