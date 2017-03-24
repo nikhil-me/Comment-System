@@ -2,6 +2,9 @@
 
 It is simple comment system application built using MEAN stack.
 
+
+![Screenshot](1.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -35,8 +38,8 @@ in the browser.
 
 ### Functionalities
 
-User can post comment using comment box.
-User can upvote or downvote comment.
+* User can post comment using comment box.
+* User can upvote or downvote comment.
 
 ## Authors
 
